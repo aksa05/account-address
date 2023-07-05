@@ -14,10 +14,14 @@ public with sharing class addressApexController {
     }
 
     public class AddressWrapper {
-        public String street;
-        public String city;
-        public String state;
-        public String zipCode;
+        @AuraEnabled
+        public String street{get;set;};
+        @AuraEnabled
+        public String city{get;set;};
+        @AuraEnabled
+        public String state{get;set;};
+        @AuraEnabled
+        public String zipCode{get;set;};
     }
 
 }
